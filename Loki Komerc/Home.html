@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="HomeStyle.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="images/loki.png">
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a> </li>
+            <li><a href="About.html">About</a> </li>
+            <li><a href="Services.html">Services</a> </li>
+            <li><a href="Contact.html">Contact</a> </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    <div class="header">
+        <div class="header-content">
+            <h1>LOKI Service</h1>
+            <span>Repair. Maintenance. Service. Quality and value since 1991.</span>
+            <button class="header-button"><a href="Contact.html">GET IN TOUCH</a></button>
+        </div>
+
+    </div>
+<section class="home">
+    <div class="home-content">
+        <h1>Loki Service</h1>
+        <div class="content">
+            Loki Service is the one-stop auto repair shop you need, providing a complete range of car care services at affordable rates.
+            Fully equipped to handle all of your maintenance and repair needs, our state-of-the-art automotive center offers computer diagnostics,
+            factory scheduled maintenance checks, quick turnaround times and certified general mechanics to tackle any issue on all makes and models
+            of any foreign or domestic vehicle. For exceptional client care, impeccable services and competitive rates Loki Service is the company for you.
+            We take care of car troubles and have our clients back on the road in no time.
+        </div>
+    </div>
+
+        <div class="home-content1">
+            <h3>Complete Automotive Services</h3>
+            <div class="home-content1-text1">
+                <p>
+                    Loki Service is committed to ensuring the safety of our customers on the road and extending the life of their car, truck or SUV.
+                    Our auto repair shop meets strict industry standards for service excellence and provides detailed estimates and qualified guidance to assist
+                    you in making informed decisions for car repair.
+                </p>
+                <img src="images/img18.jpg">
+            </div>
+
+
+                <h3 style="margin-top: 50px">Reliable Car Mechanics</h3>
+                <div class="home-content1-text2">
+                    <img class="imgBefore" src="images/img3.jpg">
+                    <p>
+                        Nothing is quite scarier than being on the road, peacefully driving your car to work or the store, when suddenly something happens to your vehicle.
+                        Whether an emergency light goes on for seemingly no reason, your brakes start giving you trouble or your car has been in an accident, we can help.<br>
+                        Our specialized mechanics will thoroughly check your vehicle for issues and identify the problem right away. Going above and beyond what is required
+                        in order to figure out a budget oriented solution to our customers. Loki Service provides full service repairs and diagnostics, working hard to
+                        service the community with the best methods available on the market.
+                    </p>
+
+                </div>
+            <img class="imgAfter" src="images/img3.jpg">
+        </div>
+
+
+
+</section>
+    <footer>
+        <div class="footer-wrapper">
+            <div class="single-footer">
+                <img src="images/loki.png">
+                <p>One of the best and most experienced auto services <br> in North Macedonia</p>
+            </div>
+
+            <div class="single-footer">
+                <ul>
+                    <h2>Navigation</h2>
+                    <li><a href="Home.html">Home</a> </li>
+                    <li><a href="About.html">About</a> </li>
+                    <li><a href="Services.html">Services</a> </li>
+                    <li><a href="Contact.html">Contact</a> </li>
+                </ul>
+            </div>
+
+            <div class="single-footer">
+                <ul>
+                    <h2>Services</h2>
+                    <li><a href="Services.html">Oil Change & Smog Test</a> </li>
+                    <li><a href="Services.html">Tire Fills & Replacements</a> </li>
+                    <li><a href="Services.html">Inspections & Tune Ups</a> </li>
+                    <li><a href="Services.html">Cleaning & Detailing</a> </li>
+                    <li><a href="Services.html">Engine Services</a> </li>
+                    <li><a href="Services.html">Purchase Tools & Parts</a> </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2306.
+        6801660271285!2d21.429944832890598!3d42.01671926775781!2m3!1f0!2f0!3f0!3m2!
+        1i1024!2i768!4f13.1!3m3!1m2!1s0x135415e18bcb6aef%3A0xafe31e5875307566!2sLoki%
+        20Komerc!5e0!3m2!1sen!2smk!4v1617995546205!5m2!1sen!2smk" width="100%" height="450"
+                    style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <p style="margin-top: 30px; display: flex; justify-content: center;">Created by ArdCuri | &copy; 2020 All rights reserved.</p>
+    </footer>
+<script>
+    const navSlide =()=>{
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+        const navLinks = document.querySelectorAll('.nav-links li');
+
+        burger.addEventListener('click', ()=>{
+            nav.classList.toggle('nav-active');
+
+            navLinks.forEach((link, index)=>{
+                if(link.style.animation){
+                    link.style.animation='';
+                } else{
+                    link.style.animation = `navLinkFade 0.5s ease forwards ${index/7 + 0.2}s`;
+                }
+
+            });
+
+            burger.classList.toggle('toggle');
+        });
+    };
+
+    navSlide();
+</script>
+</body>
+</html>

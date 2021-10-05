@@ -1,0 +1,328 @@
+:root{
+    --header-color: rgba(0, 0, 0, 0.6);
+    --headerbutton-color: rgba(0, 0, 0, 0.70);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+}
+.logo>img{
+    display: flex;
+    margin-left: 20px;
+    width: 170px;
+    height: 100px;
+}
+.nav-links{
+    transition: all 0.7s ease-in-out;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 50px;
+}
+.nav-links>li{
+    height: 100px;
+    width: 140px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+.nav-links>li>a{
+    display: flex;
+    height: 100px;
+    width: 140px;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 14px;
+    color: dodgerblue;
+    font-weight: bold;
+}
+.nav-links>li>a:hover{
+    transition: all 0.6s;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.burger{
+    margin-right: 40px;
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    width: 30px;
+    height: 3px;
+    background-color: dodgerblue;
+    margin: 7px;
+    transition: all 0.3s ease;
+}
+.header{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("images/img1.jpg");
+}
+.header .header-content{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 70vh;
+}
+.header-content{
+    background-color: var(--header-color);
+    display: flex;
+    flex-direction: column;
+    position: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.header-content h1{
+    font-family: Consolas;
+    font-size: 75px;
+}
+.header-content span{
+    font-family: Calibri;
+    font-size: 25px;
+    font-style: italic;
+}
+.header button a{
+    width: 300px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+    color: white;
+    background: transparent;
+}
+.header button{
+    margin-top: 30px;
+    background: transparent;
+    font-size: 16px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    width: 300px;
+    height: 65px;
+    border: solid 1px white;
+}
+.header button:hover{
+    transition: all 0.4s;
+    background-color: var(--headerbutton-color) ;
+}
+.header button a:hover{
+    transition: all 0.6s;
+    letter-spacing: 5px;
+}
+.services-header{
+    color: white;
+    margin-top: 120px;
+    justify-content: center;
+    align-items: center;
+}
+.services-header h2{
+    border-top: 1px solid cornflowerblue;
+    padding-top: 50px;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+}
+.services-header h3{
+    margin-top: 30px;
+    padding: 0 20px 0 20px;
+}
+.services{
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 0 100px 0;
+}
+.service1{
+    width: 45%;
+    padding: 70px 25px 25px 25px;
+}
+
+.services div img{
+    width: 100%;
+}
+.tire-brands{
+    display: flex;
+    flex-flow: row;
+    background-color: midnightblue;
+}
+.tire-brands img{
+    height: 40px;
+}
+.vulco-logo{
+    margin: 60px 120px 0 100px;
+}
+.vulco-logo img{
+    height: 100px;
+}
+.brands-content{
+    color: white;
+    margin: 60px 0 60px 40px;
+    font-size: 22px;
+}
+.brands-content a{
+    color: yellow;
+    text-decoration: none;
+}
+.brands-content a:hover{
+    letter-spacing: 2px;
+    transition: all 0.6s;
+}
+.brand-imgs{
+}
+footer{
+    padding-bottom: 40px;
+    padding-top: 40px;
+    background-color: cornflowerblue;
+    bottom: 0;
+}
+.footer-wrapper{
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.single-footer{
+    padding-left: 40px;
+    margin-top: 20px;
+    text-align: left;
+    color: white;
+
+}
+.single-footer>img{
+    width: 120px;
+    height: 70px;
+    margin-left: 20px;
+}
+.single-footer ul{
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+    list-style: none;
+}
+.single-footer ul a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+.single-footer p{
+    margin-left: 10px;
+    width: 50%;
+}
+.location>iframe{
+    margin-top: 70px;
+}
+
+@media screen and (max-width: 900px) {
+    .services div{
+        width: 100%;
+    }
+
+    .single-footer p{
+        display: none;
+    }
+}
+@media screen and (max-width: 600px) {
+    .single-footer>img{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        left: 100%;
+        top: 70px;
+        height: 530px;
+        background-color: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .nav-links>li>a:hover{
+        background-color: white;
+        color: dodgerblue;
+        font-size: 16px;
+        letter-spacing: 5px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+
+    .vulco-logo{
+        margin: 60px 0 0 40px;
+    }
+
+}
+@media screen and (max-width: 900px) {
+
+    .tire-brands{
+        display: block;
+    }
+}
+.nav-active{
+    transform: translateX(0%);
+    left: 50%;
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-8px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-8px,-6px);
+}

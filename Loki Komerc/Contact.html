@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="Contact.css">
+</head>
+<body>
+<nav>
+    <div class="logo">
+        <img src="images/loki.png">
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="Home.html">Home</a> </li>
+        <li><a href="About.html">About</a> </li>
+        <li><a href="Services.html">Services</a> </li>
+        <li><a href="Contact.html">Contact</a> </li>
+    </ul>
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</nav>
+<div class="header">
+    <div class="header-content">
+        <h1>Conctact Us</h1>
+        <span>Repair. Maintenance. Service. Quality and value since 1991.</span>
+        <button class="header-button"><a href="#contact">GET IN TOUCH</a></button>
+    </div>
+</div>
+
+<section class="contact">
+    <a name="contact"></a>
+    <div class="container">
+        <div class="contactInfo">
+
+            <div class="box">
+                <div class="icon"></div>
+                <div class="text">
+                    <h3 style="color: cornflowerblue">Address</h3>
+                    <p>North Macedonia <br> Skopje <br> Makedonsko Kosovska Brigada</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"></div>
+                <div class="text">
+                    <h3 style="color: cornflowerblue">Phone</h3>
+                    <p>
+                        02/ 2613-376
+                        071/233-483
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"></div>
+                <div class="text">
+                    <h3 style="color: cornflowerblue">Email</h3>
+                    <p>Loki_komerc@yahoo.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="contactForm">
+            <form>
+                <h2 style="color: cornflowerblue">Send Message</h2>
+                <div class="inputBox">
+                    <input type="text" name="" required="required">
+                    <span>Full Name</span>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="" required="required">
+                    <span>Email</span>
+                </div>
+                <div class="inputBox" style="margin-top: 15px">
+                    <span>Type your Message:</span><br>
+                    <textarea style="height: 110px; width: 240px" required="required"></textarea>
+                </div>
+                <div>
+                    <input class="button" type="submit" name="" value="Send">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</section>
+
+<section class="socials">
+    <div class="socials-content">
+        <div class="fb-social">
+            <a href="https://www.facebook.com/loki.komerc" target="_blank"><img class="icon" src="images/fb.png"></a>
+            <p style="color: white">You can also check about us in other platforms aswell.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-wrapper">
+        <div class="single-footer">
+            <img src="images/loki.png">
+            <p>One of the best and most experienced auto services<br> in North Macedonia</p>
+        </div>
+
+        <div class="single-footer">
+            <ul>
+                <h2>Navigation</h2>
+                <li><a href="Home.html">Home</a> </li>
+                <li><a href="About.html">About</a> </li>
+                <li><a href="Services.html">Services</a> </li>
+                <li><a href="Contact.html">Contact</a> </li>
+            </ul>
+        </div>
+
+        <div class="single-footer">
+            <ul>
+                <h2>Services</h2>
+                <li><a href="Services.html">Oil Change & Smog Test</a> </li>
+                <li><a href="Services.html">Tire Fills & Replacements</a> </li>
+                <li><a href="Services.html">Inspections & Tune Ups</a> </li>
+                <li><a href="Services.html">Cleaning & Detailing</a> </li>
+                <li><a href="Services.html">Engine Services</a> </li>
+                <li><a href="Services.html">Purchase Tools & Parts</a> </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2306.
+        6801660271285!2d21.429944832890598!3d42.01671926775781!2m3!1f0!2f0!3f0!3m2!
+        1i1024!2i768!4f13.1!3m3!1m2!1s0x135415e18bcb6aef%3A0xafe31e5875307566!2sLoki%
+        20Komerc!5e0!3m2!1sen!2smk!4v1617995546205!5m2!1sen!2smk" width="100%" height="450"
+                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <p style="margin-top: 30px; display: flex; justify-content: center;">Created by ArdCuri | &copy; 2020 All rights reserved.</p>
+</footer>
+<script>
+    const navSlide =()=>{
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+        const navLinks = document.querySelectorAll('.nav-links li');
+
+        burger.addEventListener('click', ()=>{
+            nav.classList.toggle('nav-active');
+
+            navLinks.forEach((link, index)=>{
+                if(link.style.animation){
+                    link.style.animation='';
+                } else{
+                    link.style.animation = `navLinkFade 0.5s ease forwards ${index/7 + 0.2}s`;
+                }
+
+            });
+
+            burger.classList.toggle('toggle');
+        });
+    };
+
+    navSlide();
+</script>
+</body>
+</html>
